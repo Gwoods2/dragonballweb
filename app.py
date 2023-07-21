@@ -23,11 +23,12 @@ def game():
             # why is this here? do you need it?'
             return render_template('you_died.html')
     else:
-        action = request.form.get('action')
+        raw_action = request.form.get('action')
+        syn_action = scenes.thesaurus(raw_action)
 
-        if scene_name and action:
+        if scene_name and syn_action:
             scene = scenes.load_scene(scene_name)
-            next_scene = scene.choose(action)
+            next_scene = scene.choose(syn_action)
 
             if not next_scene:
                 session['scene_name'] = scenes.name_scene(scene)
@@ -68,4 +69,4 @@ def back_scene():
 app.secret_key = 'blahblahblahblahblah'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
