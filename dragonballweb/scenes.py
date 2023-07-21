@@ -528,6 +528,18 @@ You made new friends, and got to eat some tasty food!""")
 
 error = Scene('error', 'sorry, I don\'t know what that means.')
 
+intro_error = Scene('error', 'sorry, I don\'t know what that means.')
+
+goons_error = Scene('error', 'sorry, I don\'t know what that means.')
+
+round2_error = Scene('error', 'sorry, I don\'t know what that means.')
+
+piper_error = Scene('error', 'sorry, I don\'t know what that means.')
+
+chase_error = Scene('error', 'sorry, I don\'t know what that means.')
+
+chase2_error = Scene('error', 'sorry, I don\'t know what that means.')
+
 crash = Scene('crash', 'Something went wrong.')
 
 intro.add_choices({
@@ -539,7 +551,7 @@ intro.add_choices({
     'image': intro_image,
     'crone': intro_crone,
     'hint': intro_hint,
-    'error': error,
+    'error': intro_error,
 })
 
 intro_tail.add_choices({
@@ -574,13 +586,17 @@ intro_hint.add_choices({
     'back': intro
 })
 
+intro_error.add_choices({
+    'back': intro
+})
+
 goons.add_choices({
     'fight': goons_fight,
     'pole': goons_pole,
     'beam': goons_beam,
     'image': goons_image,
     'hint': goons_hint,
-    'error': error,
+    'error': goons_error,
 })
 
 goons_fight.add_choices({
@@ -600,6 +616,10 @@ goons_image.add_choices({
 })
 
 goons_hint.add_choices({
+    'back': goons
+})
+
+goons_error.add_choices({
     'back': goons
 })
 
@@ -627,7 +647,7 @@ round2.add_choices({
     'nimbus': round2_nimbus,
     'image': round2_image,
     'hint': round2_hint,
-    'error': error,
+    'error': round2_error,
 })
 
 round2_fight.add_choices({
@@ -654,6 +674,10 @@ round2_hint.add_choices({
     'back': round2
 })
 
+round2_error.add_choices({
+    'back': round2
+})
+
 piper.add_choices({
     'fight': piper_fight,
     'beam': piper_beam,
@@ -661,7 +685,7 @@ piper.add_choices({
     'nimbus': piper_nimbus,
     'image': piper_image,
     'hint': piper_hint,
-    'error': error,
+    'error': piper_error,
 })
 
 piper_fight.add_choices({
@@ -688,13 +712,17 @@ piper_hint.add_choices({
     'back': piper
 })
 
+piper_error.add_choices({
+    'back': piper
+})
+
 chase.add_choices({
     'fight': chase_fight,
     'beam': chase_beam,
     'nimbus': chase_nimbus,
     'image': chase_image,
     'hint': chase_hint,
-    'error': error,
+    'error': chase_error,
 })
 
 chase_fight.add_choices({
@@ -717,6 +745,10 @@ chase_hint.add_choices({
     'back': chase
 })
 
+chase_error.add_choices({
+    'back': chase
+})
+
 chase2.add_choices({
     'fight': chase2_fight,
     'beam': chase2_beam,
@@ -724,7 +756,7 @@ chase2.add_choices({
     'nimbus': chase2_nimbus,
     'image': chase2_image,
     'hint': chase2_hint,
-    'error': error,
+    'error': chase2_error,
 })
 
 chase2_fight.add_choices({
@@ -748,6 +780,10 @@ chase2_image.add_choices({
 })
 
 chase2_hint.add_choices({
+    'back': chase2
+})
+
+chase2_error.add_choices({
     'back': chase2
 })
 

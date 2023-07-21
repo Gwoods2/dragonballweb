@@ -33,7 +33,13 @@ def test_all_choices():
     assert intro.choose('image') == intro_image
     assert intro.choose('crone') == intro_crone
     assert intro.choose('hint') == intro_hint
-    assert intro.choose('error') == error
+    assert intro.choose('error') == intro_error
+
+    print(error.name)
+    print(error.description)
+
+    print(intro_error.name)
+    print(intro_error.description)
 
     assert intro_tail.choose('next') == goons
     assert intro_beam.choose('next') == goons

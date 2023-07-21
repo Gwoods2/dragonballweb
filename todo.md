@@ -10,4 +10,4 @@
 
 [ ] see if i can integrate the fail commands into /back page
 
-[ ] fix error page to go back, maybe one for each choice scene
+[*] fix error page to go back, maybe one for each choice scene
