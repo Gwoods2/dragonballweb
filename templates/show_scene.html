@@ -10,10 +10,16 @@
 {% if scene.name in 'ending' %}
     <p><a href='/'>Play Again?</a></p>
 
+{% elif 'next_col' in scene.choices %}
+   <a href="/chartreuse">
+    <button>Continue</button>
+   </a>
+
 {% elif 'next' in scene.choices %}
     <a href="/next" >
         <button>Continue</button>
       </a>
+
 
 {% elif 'back' in scene.choices %}
 <a href="/back" >

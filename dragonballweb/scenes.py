@@ -1,5 +1,6 @@
 import random
 import os
+import re
 
 class Scene(object):
 
@@ -51,6 +52,7 @@ def thesaurus(input):
         'nyoibo': 'pole',
         'image': 'image',
         'after': 'image',
+        'afterimage': 'image',
         'zanzoken': 'image',
         'crone': 'crone',
         'woman': 'crone',
@@ -100,7 +102,6 @@ green_list = [
     'purple',
     'pink',
     'white',
-    'black',
     'gray',
     'brown',
 ]
@@ -603,7 +604,7 @@ goons_hint.add_choices({
 })
 
 goons_win.add_choices({
-    'next': chartreuse
+    'next_col': chartreuse
 })
 
 chartreuse.add_choices({

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1> {{ scene_name }} </h1>
+<pre>
+Colonel Chartreuse's {{char_col}} motorcycle rolls to a stop.
+She steps onto the ground with her {{char_col}} boots.
+She reaches her hands, nails painted sparkling {{char_col}}, up to her head.
+She pulls off her {{char_col}} helmet, and waves of {{char_col}} hair billow out.
+Her {{char_col}} eyes look coolly at you.
+</pre>
+
+{% if 'green' not in char_col %}
+    <p>
+Wait, that doesn't sound right.
+What color is Chartreuse again?
+    </p>
+    <p>
+        <form action="chartreuse" method="GET">
+            <input type="text" id="char_col" name="char_col" type="SUBMIT">
+        </form>
+    </p>
+
+{% else %}
+
+    <p>
+"You," she says slowly "are responsible for injuring my soldiers?"
+"No matter," she says, "I'll take you out myself"
+Curiously, she doesn't even get into a fighting stance as she says it.
+
+What do you do next?
+    </p>
+    <p>
+        <form action="game" method="POST">
+            <input type="text" name="action" type="SUBMIT">
+        </form>
+    </p>
+   
+
+
+{% endif %}
+
+{% endblock %}
