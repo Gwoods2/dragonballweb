@@ -36,19 +36,6 @@ def game():
 
         return redirect(url_for('game'))
     
-def next_scene():
-  current_scene = session.get('scene_name')
-
-  scene = scenes.load_scene(current_scene)
-  next_scene = scene.choose('next')
-
-  if not next_scene:
-    session['scene_name'] = scenes.name_scene(scene)
-  else:
-    session['scene_name'] = scenes.name_scene(next_scene)
-
-  redirect(url_for('game'))
-    
 @app.route("/next", methods=["GET"])
 def next_scene():
   current_scene = session.get('scene_name')
