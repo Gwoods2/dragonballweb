@@ -5,3 +5,5 @@
 [ ] get Chartreuse color pages actually working
 
 [ ] call thesaurus function to parse player input
+
+[ ] see if i can integrate the fail commands into /back page
