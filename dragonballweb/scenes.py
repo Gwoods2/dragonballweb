@@ -77,12 +77,6 @@ def thesaurus(input):
             pass
 
     return 'error'
-
-def next_scene():
-    return 'next'
-
-def back_scene():
-    return 'back'
     
 
 def fail():

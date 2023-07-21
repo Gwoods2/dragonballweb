@@ -11,21 +11,14 @@
     <p><a href='/'>Play Again?</a></p>
 
 {% elif 'next' in scene.choices %}
-   <!--<p>
-        <button id="nextbutton">Continue</button>
-    </p>
-    <script>
-        document.getElementById("nextbutton").onclick = function () { 
-            document.getElementById("nextbutton").return("next")};
-    </script>-->
-    <input type="button" onclick=next_scene() value="Continue">
+    <a href="/next" >
+        <button>Continue</button>
+      </a>
 
 {% elif 'back' in scene.choices %}
-    <p>
-        <form action="game" method="POST">
-            <input type="button" name="action" onclick="back" value="Try again?">
-        </form>
-    </p>
+<a href="/back" >
+    <button>Try again?</button>
+  </a>
 
 {% elif 'crash' in scene.name %}
     <p><a href='/'>Reload the game</a></p>
