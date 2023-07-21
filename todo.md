@@ -3,3 +3,5 @@
 [ ] Make secretkey actually secret
 
 [ ] get Chartreuse color pages actually working
+
+[ ] call thesaurus function to parse player input
