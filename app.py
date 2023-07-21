@@ -121,4 +121,4 @@ def color_check():
 app.secret_key = 'blahblahblahblahblah'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
